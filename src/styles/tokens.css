@@ -1,0 +1,74 @@
+/*
+ * Tokens del sistema de diseno de uStudent.
+ * Fuente de verdad: docs/05-ux/sistema-diseno.md
+ *
+ * Una sola definicion por color. Los componentes nunca escriben un hex:
+ * usan la utilidad de Tailwind generada desde @theme, o var(--color-*).
+ */
+
+@theme {
+  /* ── Azul institucional · marca y navegacion ───────────────────── */
+  --color-blue-50: #eef4fb;
+  --color-blue-100: #d6e4f5;
+  --color-blue-200: #aec9ea;
+  --color-blue-400: #4a87cc;
+  --color-blue-600: #1b5fa8;
+  --color-blue-700: #154b85;
+  --color-blue-900: #0a2540;
+
+  /* ── Turquesa · acento, datos y confirmacion ───────────────────── */
+  --color-teal-50: #e6f7f7;
+  --color-teal-300: #5fd0ce;
+  --color-teal-500: #14a5a0;
+  --color-teal-700: #0c7a76;
+
+  /* ── Neutros ───────────────────────────────────────────────────── */
+  --color-neutral-0: #ffffff;
+  --color-neutral-50: #f7f9fc;
+  --color-neutral-200: #e3e8ef;
+  --color-neutral-500: #697586;
+  --color-neutral-700: #3f4a5a;
+  --color-neutral-900: #121926;
+
+  /* ── Semanticos ────────────────────────────────────────────────── */
+  --color-success: #0e8a5f;
+  --color-warning: #b26a00;
+  --color-danger: #c0362c;
+  --color-info: #1b5fa8;
+
+  /* ── Niveles de riesgo ─────────────────────────────────────────────
+   * Deliberadamente no es una escala verde→rojo: el objetivo es priorizar
+   * atencion, no senalar culpables. Nunca se comunica solo por color.
+   */
+  --color-risk-low-bg: #e6f7f7;
+  --color-risk-low-fg: #0c7a76;
+  --color-risk-moderate-bg: #fdf3e2;
+  --color-risk-moderate-fg: #8a5300;
+  --color-risk-high-bg: #fcebdf;
+  --color-risk-high-fg: #a64b12;
+  --color-risk-critical-bg: #fbe9e7;
+  --color-risk-critical-fg: #98271e;
+
+  /* ── Roles semanticos de superficie y texto ────────────────────── */
+  --color-primary: var(--color-blue-600);
+  --color-primary-hover: var(--color-blue-700);
+  --color-accent: var(--color-teal-500);
+  --color-accent-text: var(--color-teal-700);
+  --color-surface: var(--color-neutral-0);
+  --color-background: var(--color-neutral-50);
+  --color-border: var(--color-neutral-200);
+  --color-text: var(--color-neutral-700);
+  --color-text-strong: var(--color-neutral-900);
+  --color-text-muted: var(--color-neutral-500);
+
+  /* ── Tipografia ────────────────────────────────────────────────── */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* ── Radios ────────────────────────────────────────────────────── */
+  --radius-control: 6px;
+  --radius-card: 12px;
+
+  /* ── Elevacion · solo dos niveles ──────────────────────────────── */
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06);
+  --shadow-md: 0 8px 24px rgba(16, 24, 40, 0.1);
+}

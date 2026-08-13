@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build y verificaciones
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Comprobacion de tipos
+        run: npm run typecheck
+
+      - name: Build
+        run: npm run build
+        env:
+          # El build no debe depender de que el backend este vivo: la pagina
+          # de inicio maneja el fallo de conexion como un estado mas.
+          NEXT_PUBLIC_API_URL: http://localhost:8080/api/v1

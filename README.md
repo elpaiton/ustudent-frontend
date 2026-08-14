@@ -1,4 +1,4 @@
-﻿# uStudent · Frontend
+# uStudent · Frontend
 
 Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS 4.
 
@@ -43,7 +43,7 @@ src/
 - **Colores solo por token.** Nada de hex en los componentes. Tailwind 4 se configura desde
   CSS: los tokens viven en un bloque `@theme` de `src/styles/tokens.css` y de ahí salen las
   utilidades (`bg-blue-600`, `text-teal-700`). No hay `tailwind.config.ts`. Ver
-  [sistema de diseño](https://github.com/elpaiton/ustudent-backend/blob/main/docs/05-ux/sistema-diseno.md).
+  [sistema de diseño](https://github.com/elpaiton/ustudent-docs/blob/main/05-ux/sistema-diseno.md).
 - **El menú se arma con los permisos** del token, pero ocultar no autoriza: la autorización
   real está en el servidor.
 - **Todo listado** define sus estados de carga, error y vacío.
@@ -66,6 +66,6 @@ npm run test:e2e
 
 ## Referencias
 
-- [Sistema de diseño](https://github.com/elpaiton/ustudent-backend/blob/main/docs/05-ux/sistema-diseno.md)
-- [Mapa de navegación](https://github.com/elpaiton/ustudent-backend/blob/main/docs/05-ux/mapa-navegacion.md)
-- [Contrato de API](https://github.com/elpaiton/ustudent-backend/blob/main/docs/03-especificaciones/api/api-rest.md)
+- [Sistema de diseño](https://github.com/elpaiton/ustudent-docs/blob/main/05-ux/sistema-diseno.md)
+- [Mapa de navegación](https://github.com/elpaiton/ustudent-docs/blob/main/05-ux/mapa-navegacion.md)
+- [Contrato de API](https://github.com/elpaiton/ustudent-docs/blob/main/03-especificaciones/api/api-rest.md)
